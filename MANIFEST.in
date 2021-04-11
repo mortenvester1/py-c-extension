@@ -1,0 +1,7 @@
+include readme.md
+include requirements.txt
+include setup.py
+include tox.ini
+
+global-exclude __pycache__
+global-exclude *.py[cod]
