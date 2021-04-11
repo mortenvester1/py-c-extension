@@ -28,6 +28,7 @@ setup(
     author_email="gurp@gork.com",
     url="www.gurpgork.com",
     license="MIT",
+    python_requires=">3.6.4"
     packages=get_packages(),
     install_requires=get_requirements(),
     ext_modules=[
