@@ -22,12 +22,17 @@ jobs:
     
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install tox tox-gh-actions
+        pip3 install --upgrade pip
+        pip3 install tox tox-gh-actions
     
     - name: Test with tox
       run: |
         tox
       env:
         PLATFORM: ${{ matrix.platform  }}
-
+    
+    # if successful build -> release
+    - name: Build
+      run: |
+        pip3 install setuptools build wheel
+        python3 setup.py sdist bdist_wheel

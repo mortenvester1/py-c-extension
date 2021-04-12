@@ -1,5 +1,4 @@
 import os
-from spammer import __version__
 from setuptools import setup, find_packages, Extension
 
 
@@ -21,7 +20,7 @@ rootdir = os.path.normpath(os.path.join(__file__, os.pardir))
 
 setup(
     name="spammer",
-    version=__version__,
+    version="0.0.1",
     description="module for testing c extentions",
     long_description=get_long_description(),
     author="gurpgork",
